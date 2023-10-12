@@ -1,5 +1,6 @@
 import numpy as np
 import os
+import time
 from colorama import Fore
 from colorama import Style
 from copy import deepcopy
@@ -8,6 +9,8 @@ from pygame.constants import KEYDOWN
 import bfs
 import astar
 import bestfs
+from memory_profiler import profile
+
 
 ''' TIME OUT FOR ALL ALGORITHM'''
 TIME_OUT = 1800
@@ -286,7 +289,7 @@ def notfoundGame():
 	screen.blit(text_2, text_rect_2)
 
 	
-
+@profile
 def main():
 	sokoban()
 

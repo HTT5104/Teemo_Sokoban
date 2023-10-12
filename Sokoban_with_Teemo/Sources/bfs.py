@@ -1,6 +1,7 @@
 import support_function as spf
 import time
 import os
+from memory_profiler import profile
 
 '''
 //========================//
@@ -9,6 +10,7 @@ import os
 //     IMPLEMENTATION     //
 //========================//
 '''
+@profile
 def BFS_search(board, list_check_point):
     start_time = time.time()
     ''' BFS SEARCH SOLUTION '''
@@ -71,6 +73,7 @@ def BFS_search(board, list_check_point):
 
             ''' COMPUTE THE TIMEOUT '''
             end_time = time.time()
+            
             if end_time - start_time > spf.TIME_OUT:
                 return []
         end_time = time.time()

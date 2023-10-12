@@ -2,6 +2,7 @@ import support_function as spf
 import time
 import os
 from queue import PriorityQueue
+from memory_profiler import profile
 
 '''
 //========================//
@@ -10,6 +11,7 @@ from queue import PriorityQueue
 //     IMPLEMENTATION     //
 //========================//
 '''
+@profile
 def AStart_Search(board, list_check_point):
     start_time = time.time()
     ''' A* SEARCH SOLUTION '''
@@ -73,6 +75,7 @@ def AStart_Search(board, list_check_point):
 
             ''' COMPUTE THE TIMEOUT '''
             end_time = time.time()
+            
             if end_time - start_time > spf.TIME_OUT:
                 return []
         end_time = time.time()
