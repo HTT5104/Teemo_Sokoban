@@ -32,9 +32,9 @@ class state:
         list_boxes = find_boxes_position(self.board)
         if self.heuristic == 0:
             if main.algorithm == "A Star Search":
-                self.heuristic = len(self.get_line()) + len(list_boxes) + abs(sum(list_boxes[i][0] + list_boxes[i][1] - self.check_points[i][0] - self.check_points[i][1] for i in range(len(list_boxes))))
+                self.heuristic = len(self.get_line()) + abs(sum(list_boxes[i][0] + list_boxes[i][1] - self.check_points[i][0] - self.check_points[i][1] for i in range(len(list_boxes))))
             else: #for algorithm == Best First Search
-                self.heuristic = len(list_boxes) + abs(sum(list_boxes[i][0] + list_boxes[i][1] - self.check_points[i][0] - self.check_points[i][1] for i in range(len(list_boxes))))
+                self.heuristic = abs(sum(list_boxes[i][0] + list_boxes[i][1] - self.check_points[i][0] - self.check_points[i][1] for i in range(len(list_boxes))))
         return self.heuristic
     
     '''
