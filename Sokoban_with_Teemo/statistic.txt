@@ -20,6 +20,7 @@ Case	Level	Time	Memory	State	Step
 	18
 	19
 	20
+
 				
 A*	
 Case	Level	Time	Memory	State	Step			
@@ -43,7 +44,8 @@ Case	Level	Time	Memory	State	Step
 	18
 	19
 	20
-				
+	
+			
 Best				
 Case	Level	Time	Memory	State	Step				
 	1	0,641	78,4	47	14
