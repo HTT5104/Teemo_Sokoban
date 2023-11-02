@@ -48,7 +48,7 @@ def BestFS_Search(board, list_check_point):
         for next_pos in list_can_move:
             ''' MAKE NEW BOARD '''
             new_board = spf.move(now_state.board, next_pos, cur_pos, list_check_point)
-            ''' IF THIS BOARD DON'T HAVE IN LIST BEFORE --> SKIP THE STATE '''
+            ''' IF THIS BOARD IN LIST BEFORE --> SKIP THE STATE '''
             if spf.is_board_exist(new_board, list_state):
                 continue
             ''' IF ONE OR MORE BOXES ARE STUCK IN THE CORNER --> SKIP THE STATE '''
